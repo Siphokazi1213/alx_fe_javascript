@@ -307,10 +307,7 @@ async function syncQuotes() {
       saveQuotes(); // Save the merged data to local storage
       populateCategories(); // Update categories dropdown
       filterQuotes(); // Re-apply current filter
-      showNotification(
-        "Data synced: Local quotes updated from server.",
-        "success"
-      );
+      showNotification("Quotes synced with server!", "success"); // Changed this line
       console.log("Local data updated after sync. New quotes array:", quotes);
     } else {
       showNotification("Data is already up-to-date with server.", "info");
