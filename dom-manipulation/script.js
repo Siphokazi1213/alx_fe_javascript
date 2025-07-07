@@ -113,3 +113,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Add event listener to the "Show New Quote" button
 newQuoteButton.addEventListener("click", showRandomQuote);
+
+function saveQuotes() {
+  try {
+    localStorage.setItem(LOCAL_STORAGE_QUOTES_KEY, JSON.stringify(quotes));
+    console.log("Quotes saved to local storage.");
+  } catch (e) {
+    console.error("Error saving to local storage:", e);
+  }
+}
